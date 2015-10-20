@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-router-dsl'
+  name: 'ember-pathguard'
 };

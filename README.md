@@ -1,6 +1,31 @@
-# Ember-router-dsl
+# Pathguard
 
-This README outlines the details of collaborating on this Ember addon.
+Pathguard is an experimental alternative router map DSL.
+
+## Usage
+
+To activate pathguard import it into your `router.js`:
+
+```js
+import Ember from 'ember';
+import 'ember-pathguard/register';
+
+Router.map(function() {
+  this.guard('authenticated', function() {
+    this.path('dashboard');
+    this.path('projects', function() {
+      this.path(':project_id', { as: 'project' });
+    });
+  });
+
+  this.path('signin');
+  this.path('signup');
+});
+```
+
+## Limitations
+
+- Only one `this.guard` may be present in the router map.
 
 ## Installation
 
