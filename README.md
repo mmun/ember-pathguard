@@ -26,6 +26,12 @@ Router.map(function() {
 ## Limitations
 
 - Only one `this.guard` may be present in the router map.
+- Substates (loading/error) are not supported yet.
+
+## Future Ideas
+
+- Relative names: `as: './post'
+- Absolute paths: `this.path('/users/home')`
 
 ## Installation
 
