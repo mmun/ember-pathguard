@@ -1,3 +1,17 @@
-<h2 id="title">Welcome to Ember</h2>
+<span id="route-name">{{currentRouteName}}</span>
+<hr>
+<ul>
+  <li>{{#link-to 'index'}}index{{/link-to}}</li>
+  <li>{{#link-to 'foo'}}foo{{/link-to}}</li>
+  <li>{{#link-to 'baz'}}bar as baz{{/link-to}}</li>
+  <li>{{#link-to 'mouse/bird'}}mouse/bird{{/link-to}}</li>
+  <li>{{#link-to 'elephant'}}cat/dog as elephant{{/link-to}}</li>
+  <li>{{#link-to 'orange/black'}}red as orange/black{{/link-to}}</li>
 
+  <li>{{#link-to 'dashboard'}}dashboard{{/link-to}}</li>
+  <li>{{#link-to 'floob/blarb'}}floob/blarb{{/link-to}}</li>
+
+  {{!-- <li>{{#link-to 'authenticated'}}boom{{/link-to}}</li> --}}
+</ul>
+<hr>
 {{outlet}}
