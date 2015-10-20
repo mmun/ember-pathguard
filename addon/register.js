@@ -30,7 +30,7 @@ DSL.prototype.path = function(path, ...args) {
 
   if (args.length === 0) {
     // Nothing to do.
-  } if (args.length === 1) {
+  } else if (args.length === 1) {
     Ember.assert(
       'this.path(...) expects a callback or an options hash in the second argument when called with two arguments',
       typeof args[0] === 'function' || (typeof args[0] === 'object' && args[0] !== null)
