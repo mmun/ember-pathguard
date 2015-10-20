@@ -1,6 +1,34 @@
 # Ember-router-dsl
 
-This README outlines the details of collaborating on this Ember addon.
+Before:
+
+```js
+Router.map(function() {
+  this.route('posts', function() {
+    this.route('post', { path: ':post_id' });
+  });
+});
+```
+
+```js
+{{link-to 'All Posts' 'posts'}}
+{{link-to 'Post 1' 'posts.post' 1}}
+```
+
+After:
+
+```js
+Router.map(function() {
+  this.path('posts', function() {
+    this.path(':post_id', { as: 'post' });
+  });
+});
+```
+
+```js
+{{link-to 'All Posts' 'posts'}}
+{{link-to 'Post 1' 'post' 1}}
+```
 
 ## Installation
 
