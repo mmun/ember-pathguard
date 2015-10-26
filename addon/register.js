@@ -65,7 +65,7 @@ DSL.prototype.path = function(path, ...args) {
     as: (opts && opts.as) || null,
     path: path,
     callback: callback
-  }
+  };
 
   createPath(this, options);
 };
