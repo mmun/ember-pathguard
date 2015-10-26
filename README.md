@@ -30,7 +30,7 @@ Router.map(function() {
 
 ## Future Ideas
 
-- Relative names: `as: './post'
+- Relative names: `as: './post'`
 - Absolute paths: `this.path('/users/home')`
 
 ## Installation
